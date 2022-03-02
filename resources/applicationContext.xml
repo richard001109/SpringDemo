@@ -4,11 +4,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--由Spring容器创建实例对象-->
-    <bean id="helloSpring" class="com.chinasofti.test.HelloSpring">
-        <!--给对象的属性赋值-->
-        <property name="username" value="赵四"></property>
-        <!-- collaborators and configuration for this bean go here -->
-    </bean>
+<!--    <bean id="helloSpring" class="com.chinasofti.test.HelloSpring">-->
+<!--        &lt;!&ndash;给对象的属性赋值&ndash;&gt;-->
+<!--        <property name="username" value="赵四"></property>-->
+<!--        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;-->
+<!--    </bean>-->
     <!-- more bean definitions go here -->
-
+    <!--创建UserDao的实例-->
+    <bean id="userDao" class="com.chinasofti.dao.impl.UserDaoImpl">
+    </bean>
+    <!--创建UserService的实例-->
+    <bean id="userService" class="com.chinasofti.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+    </bean>
 </beans>
