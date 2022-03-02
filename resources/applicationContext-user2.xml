@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--由Spring容器创建实例对象-->
+    <bean id="User2" class="com.chinasofti.pojo.User2">
+        <!--给对象的属性赋值-->
+        <property name="id" value="1" />
+        <property name="username" value="test"/>
+        <property name="password" value="666666"/>
+
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+    <!-- more bean definitions go here -->
+
+</beans>
